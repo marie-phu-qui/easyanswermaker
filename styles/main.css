@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    height:100%;
+}
+
+body{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    height: 100vh; /*Avoid the IE 10-11 `min-height` bug.*/
+    background: lightpink;
+    padding: 2em;
+    margin:0;
+    font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.container{
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 1.5em;
+}
+
+#main-title h1{
+    flex: 1 0 auto;
+    margin: 1em;
+    border-style: solid;
+    border-width: .3em;
+    border-color: antiquewhite;
+    color: antiquewhite;
+    font-size: 4em;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.content{
+    flex-shrink: 1;
+    padding: 1em;
+}
+
+.title{
+    text-align: center;
+    padding: 1em;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    box-sizing: border-box;
+}
+
+input[type=button]{
+    text-align: center;
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+    padding : 1em 1.5em;
+}
+
+.footer{
+    flex-shrink: 0;
+    padding: 1em;
+    margin:0;
+    position: relative;
+    width:100%;
+    bottom:0;
+    left:0;
+}
+
+footer{
+    padding-top: 1.5em;
+    background-color: antiquewhite;
+}
+
+#description{
+    font-family: 'Playfair Display', serif, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: rgb(93, 209, 192);
+}
