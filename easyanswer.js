@@ -10,11 +10,11 @@ function clearScreen(){
     }
 }
 
-//random answer
+//randomise answer
 function chooseAnswer(){
     let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
     console.log(chosenAnswer);
-//display the answer need to be in choose answer to have the same chosenAnswer
+//display the answer !need to be in choose answer to have the same chosenAnswer
     function displayAnswer(){
         if (chosenAnswer=="YES"){
             $("#answer").html("YES");
@@ -31,7 +31,6 @@ function chooseAnswer(){
             $("#answer").fadeIn("slow");
             return;
         }
-        console.log(chosenAnswer);
     }
     displayAnswer()
     return;
