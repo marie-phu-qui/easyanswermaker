@@ -61,12 +61,23 @@ input[type=button]{
     padding : 1em 1.5em;
 }
 
+div.answer{
+    height: 4em;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
 p#answer{
     text-align: center;
-    font-size: 10em;
+    position: relative;
+    font-size: 700%;
     font-weight: 900;
     color: rgb(93, 209, 192);
-    display: block;
+    display: none;  
+
 }
 
 .footer{
