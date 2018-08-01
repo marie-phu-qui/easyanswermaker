@@ -2,6 +2,8 @@ let answers = ["YES", "NO", "Ask me later."];
 let button = $("input.button");
 let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 
+//if there has been Ask me Later answers create a timer for each question
+
 //make former answer disappear when clicking the question input
 function clearScreen(){
     if($("#answer").length>0){
