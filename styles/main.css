@@ -61,6 +61,14 @@ input[type=button]{
     padding : 1em 1.5em;
 }
 
+p#answer{
+    text-align: center;
+    font-size: 10em;
+    font-weight: 900;
+    color: rgb(93, 209, 192);
+    display: block;
+}
+
 .footer{
     flex-shrink: 0;
     padding: 1em;
