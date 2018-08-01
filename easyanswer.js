@@ -16,21 +16,9 @@ function chooseAnswer(){
     console.log(chosenAnswer);
 //display the answer !need to be in choose answer to have the same chosenAnswer
     function displayAnswer(){
-        if (chosenAnswer=="YES"){
-            $("#answer").html("YES");
-            $("#answer").fadeIn("slow");
-            return;
-        }
-        else if (chosenAnswer=="NO"){
-            $("#answer").html("NO"); 
-            $("#answer").fadeIn("slow");
-            return;
-        }   
-        else {
-            $("#answer").html("Ask me later.");
-            $("#answer").fadeIn("slow");
-            return;
-        }
+        $("#answer").html(chosenAnswer);
+        $("#answer").fadeIn("slow");
+        return;
     }
     displayAnswer()
     return;
@@ -39,14 +27,14 @@ function chooseAnswer(){
 //check if this is a proper question
 function checkQuestion(){
     if (document.getElementById("question").value.includes("?")){
-    chooseAnswer();
-    return;
+        chooseAnswer();
+        return;
     }
     else {
-    // will appear big on screen with a fadeout
-    $("#attention").html("Ask me something with a '?'");
-    $("#attention").fadeIn("slow");
-    return;
+        // will appear big on screen with a fadeout
+        $("#attention").html("Ask me something with a '?'");
+        $("#attention").fadeIn("slow");
+        return;
     }
 }
 
