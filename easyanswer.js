@@ -3,6 +3,16 @@ let button = $("input.button");
 let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 
 //if there has been Ask me Later answers create a timer for each question
+function setTimer(){
+
+}
+
+//add to ask later list
+function listLater(){
+    let list = $("#later-list");
+    $("#later-list").add("li");
+    $("#later-list")("li:last" ).html($("#question").val());
+}
 
 //make former answer disappear when clicking the question input
 function clearScreen(){
@@ -20,6 +30,10 @@ function chooseAnswer(){
     function displayAnswer(){
         $("#answer").html(chosenAnswer);
         $("#answer").fadeIn("slow");
+        if (chosenAnswer=="Ask me later."){
+            listLater();
+            return;
+        }
         return;
     }
     displayAnswer()
@@ -28,7 +42,7 @@ function chooseAnswer(){
 
 //check if this is a proper question
 function checkQuestion(){
-    if (document.getElementById("question").value.includes("?")){
+    if ($("#question").val().includes("?")){
         chooseAnswer();
         return;
     }
