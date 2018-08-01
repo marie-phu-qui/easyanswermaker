@@ -25,7 +25,6 @@ function clearScreen(){
 //randomise answer
 function chooseAnswer(){
     let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
-    console.log(chosenAnswer);
 //display the answer !need to be in choose answer to have the same chosenAnswer
     function displayAnswer(){
         $("#answer").html(chosenAnswer);
