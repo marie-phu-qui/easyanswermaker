@@ -47,9 +47,6 @@ function checkQuestion(){
     // will appear big on screen with a fadeout
     $("#attention").html("Ask me something with a '?'");
     $("#attention").fadeIn("slow");
-
-    console.log("Ask me something with a '?'");
-
     return;
     }
 }
