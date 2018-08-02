@@ -59,19 +59,16 @@ function answer(){
     checkQuestion();
 };
 
-//prevent reloading of page with enter key press
-$(document).keypress(function(e) { 
-    if(e.keyCode === 13) { 
-        e.preventDefault(); 
-        return false; 
-    } 
-});
-
-/*
-$(form).keypress(function(e) { 
-    if(e.keyCode === 13) { 
-        answer(); 
-        return;
-    } 
-});
-*/
+$(document).ready(function(){
+    let input = document.getElementById("question");
+    input.addEventListener("keydown", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, of enter key reloading page
+            event.preventDefault();
+        // Trigger the button element with a click
+            document.getElementById("submit-btn").click();
+            console.log("enter key pressed");
+        }
+    });
+})
