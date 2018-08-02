@@ -39,12 +39,12 @@
                 <p id="answer"> </p>
             </div>
 
-            <form>
+            <form id="question-form">
                 <div>
-                    <input type=text id="question"placeholder="Type your question here" onclick=clearScreen()></input>
+                    <input type=text id="question" placeholder="Type your question here" onclick=clearScreen()></input>
                 </div>
                 <div class="button">
-                  <input type=button value="ASK" onclick=answer()>
+                  <input type=button value="ASK" id="submit-btn" onclick=answer()></input>
                 </div>
             </form>
             

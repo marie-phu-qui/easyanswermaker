@@ -40,6 +40,7 @@ function chooseAnswer(){
 }
 
 //check if this is a proper question
+//! ADD check if the question is part of the ASK LATER list
 function checkQuestion(){
     if ($("#question").val().includes("?")){
         chooseAnswer();
@@ -57,3 +58,20 @@ function checkQuestion(){
 function answer(){
     checkQuestion();
 };
+
+//prevent reloading of page with enter key press
+$(document).keypress(function(e) { 
+    if(e.keyCode === 13) { 
+        e.preventDefault(); 
+        return false; 
+    } 
+});
+
+/*
+$(form).keypress(function(e) { 
+    if(e.keyCode === 13) { 
+        answer(); 
+        return;
+    } 
+});
+*/
