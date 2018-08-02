@@ -60,15 +60,13 @@ function answer(){
 };
 
 $(document).ready(function(){
-    let input = document.getElementById("question");
-    input.addEventListener("keydown", function(event) {
+    $("#question").keypress(function(event) {
         // Number 13 is the "Enter" key on the keyboard
         if (event.keyCode === 13) {
         // Cancel the default action, of enter key reloading page
             event.preventDefault();
         // Trigger the button element with a click
-            document.getElementById("submit-btn").click();
-            console.log("enter key pressed");
+            $("#submit-btn").click();
         }
     });
 })
