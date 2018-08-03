@@ -2,16 +2,15 @@ let answers = ["YES", "NO", "Ask me later."];
 let button = $("input.button");
 let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 
-//if there has been Ask me Later answers create a timer for each question
-function setTimer(){
+//if there has been Ask me Later answers create a 30 sec timer for each question
+// function setTimer(){
 
-}
+// }
 
 //add to ask later list
 function listLater(){
-    let list = $("#later-list");
-    $("#later-list").add("li");
-    $("#later-list")("li:last" ).html($("#question").val());
+    $("#later-list").append("<li>"+ $('#question').val()+ "</li>");
+    return;
 }
 
 //make former answer disappear when clicking the question input
