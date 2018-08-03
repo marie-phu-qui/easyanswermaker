@@ -53,7 +53,6 @@ function chooseAnswer(){
 }
 
 //check if this is a proper question
-//! ADD check if the question is part of the ASK LATER list
 function checkQuestion(){
     if ($("#question").val().includes("?")){
         chooseAnswer();
