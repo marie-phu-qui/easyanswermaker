@@ -7,6 +7,17 @@ let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 
 // }
 
+//if the question asked is part of the ask later list erase it from entries
+function checkQuestionRepetition(){
+    for (i=0; i<$("li").length; i++) {
+        if($( "li" ).eq(i).html() == $('#question').val()){
+            console.log("there is an entry to remove");
+            ($("li").eq(i)).remove();
+            return;
+        }
+    }
+}
+
 //add to ask later list
 function listLater(){
     $("#later-list").append("<li>"+ $('#question').val()+ "</li>");
@@ -55,6 +66,7 @@ function checkQuestion(){
 
 //gives answer
 function answer(){
+    checkQuestionRepetition();
     checkQuestion();
 };
 
