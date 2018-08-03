@@ -11,7 +11,6 @@ let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 function checkQuestionRepetition(){
     for (i=0; i<$("li").length; i++) {
         if($( "li" ).eq(i).html() == $('#question').val()){
-            console.log("there is an entry to remove");
             ($("li").eq(i)).remove();
             return;
         }
@@ -29,6 +28,10 @@ function clearScreen(){
     if($("#answer").length>0){
         $("#answer").fadeOut(2000);
         $("#attention").fadeOut(2000);
+    }
+    //if already a entry im question make question disappear
+    if($('#question').val().length>0){
+        $('input[type=text]').select();
     }
 }
 
