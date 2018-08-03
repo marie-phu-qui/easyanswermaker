@@ -122,3 +122,8 @@ footer{
     font-size: 1em;
     color: rgb(93, 209, 192);
 }
+
+.blur-all {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

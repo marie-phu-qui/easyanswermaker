@@ -28,6 +28,8 @@ function clearScreen(){
     if($("#answer").length>0){
         $("#answer").fadeOut(2000);
         $("#attention").fadeOut(2000);
+        // remove bluring effect
+        $(".title").removeClass("blur-all");
     }
     //if already a entry im question make question disappear
     if($('#question').val().length>0){
@@ -40,6 +42,7 @@ function chooseAnswer(){
     let chosenAnswer = answers[Math.floor(Math.random() * answers.length)];
 //display the answer !need to be in choose answer to have the same chosenAnswer
     function displayAnswer(){
+        $(".title").addClass("blur-all");
         $("#answer").html(chosenAnswer);
         $("#answer").fadeIn("slow");
         if (chosenAnswer=="Ask me later."){
